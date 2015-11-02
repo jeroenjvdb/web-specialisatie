@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>navigation foundation</title>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<script src="js/vendor/modernizr.js"></script>
+	
+	
+	<style>
+	img{
+		/*max-height: 80%;*/
+		}
+
+	@media only screen and (min-width: 40em){
+		.top-bar{
+			text-align: center;
+		}
+		ul.center-buttons{
+			display: inline-block;
+		}
+		.logo{
+			left: 5px;
+			top: -2px;
+			position:absolute;
+		}
+	}
+
+	.logo{
+		max-width: 2rem;
+		margin-top: -3px;
+		margin-left: 5px;
+	}
+	.menu-icon{
+		padding-top: 1.2rem;
+	}
+	.top-bar.expanded{
+		background: #333;
+	}
+	.logo{
+		margin-top: 2px;
+	}
+
+	.fixed.static{
+		position: relative;
+	}
+	</style>
+</head>
+<body>
+	<div style="height:50px;"></div>
+	<div class="sticky">
+		
+	<nav class="top-bar" data-topbar role="navigation" >
+		<ul class="title-area">
+			<!-- <li class="name">
+				<h1><a href="#">foundation nav</a></h1>
+			</li> -->
+			<li class="toggle-topbar menu-icon" > <!-- weghale van de klas menu-icon zal enkel de tekst in de span laten zien --> <a href="#"><span>Menu <!-- weghalen menu zal bij mobiele site enkel het menu-icon laten zien --> </span></a></li>
+		</ul>
+		<div class="logo">
+			<a href="#"><img src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" alt=""></a>
+		</div>
+		<section class="top-bar-section">
+			<!--rechter deel menu -->
+			<ul class="right">
+				<li class="active"><a href="#">actief</a></li>
+				<li class="has-dropdown">
+					<a href="#">dropdown rechts actief</a>
+					<ul class="dropdown">
+						<li><a href="#">eerste link in dropdown</a></li>
+						<li><a href="#" class="active">active level 2</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- linker deel menu -->
+			<ul class="left"></ul>
+		</section>
+	</nav>
+	</div>
+	<div style="height:2000px;">
+		<h1>test</h1>
+	</div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/fastclick.js"></script>
+
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>
