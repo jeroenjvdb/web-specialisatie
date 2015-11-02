@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>gridView</title>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<style>
+		.columns {
+			border: 1px solid black;
+			background-color: #999;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<h1>bootstrap basics gridview</h1>
+		<h2>the grid</h2>
+		<p>12 grid system</p>
+		<div class="row">
+			
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+			<div class="small-1 columns">1/12</div>
+		</div>
+		<p>je kan de breedte van elke div kiezen (per 12e ofc)</p>
+		<div class="row">
+			<div class="small-1 columns">1/12</div>
+			<div class="small-2 columns">2/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-4 columns">4/12</div>
+			<div class="small-5 columns">5/12</div>
+			<div class="small-6 columns">6/12</div>
+			<div class="small-7 columns">7/12</div>
+			<div class="small-8 columns">8/12</div>
+			<div class="small-9 columns">9/12</div>
+			<div class="small-10 columns">10/12</div>
+			<div class="small-11 columns">11/12</div>
+			<div class="small-12 columns">12/12</div>
+		</div>
+		<p>het grid gaat in de maten mogelijk alles op 1 rij zetten.</p>
+		<div class="row">
+			
+			<div class="small-2 columns">2/12</div>
+			<div class="small-2 columns">2/12</div>
+			<div class="small-2 columns">2/12</div>
+			<div class="small-2 columns">2/12</div>
+			<div class="small-2 columns">2/12</div>
+			<div class="small-2 columns">2/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-4 columns">4/12</div>
+			<div class="small-4 columns">4/12</div>
+			<div class="small-4 columns">4/12</div>
+			<div class="small-6 columns">6/12</div>
+			<div class="small-6 columns">6/12</div>
+			<div class="small-12 columns">12/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-6 columns">6/12</div>
+			<div class="small-3 columns">3/12</div>
+		</div>
+		<p>wanneer het niet mogelijk is om op dezelfde rij aan te vullen zal hij de div beginnen op een nieuwe rij</p>
+
+		<div class="row">
+			<div class="small-5 columns">5/12</div>
+			<div class="small-5 columns">5/12</div>
+			<div class="small-5 columns">5/12</div>
+			<div class="small-8 columns">8/12</div>
+			<div class="small-3 columns">3/12</div>
+			<div class="small-1 columns">1/12</div>
+		</div>
+
+		<p>wat gebeurt er als we heel veel tekst in een smalle div zetten en minder content in een bredere?</p>
+		<div class="row">
+			<div class="small-2 columns">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula rutrum rutrum. Aenean lobortis in ipsum sit amet elementum. Sed tincidunt eros at sem suscipit lacinia. Ut ultrices pharetra tellus. Nulla vitae accumsan enim, eget accumsan eros. Suspendisse bibendum mollis augue quis suscipit. Duis scelerisque laoreet laoreet. Mauris at nisi ac magna commodo ullamcorper a quis libero. Maecenas sapien est, lobortis sit amet mi ut, euismod blandit lacus. Aenean ac felis diam. Integer nec pharetra sem. Sed pulvinar velit sit amet ipsum porta, ut faucibus dolor maximus.
+</div>
+			<div class="small-10 columns">not so much content</div>
+			<div class="small-5 columns">not so much content either</div>
+		</div>
+			<p>de 3e div vult ook nog bij naast de eerste div. <br>
+			hoe kan ik deze onder de eerste div krijgen? => clearfix</p>
+
+		<div class="row">
+			<div class="small-2 columns">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula rutrum rutrum. Aenean lobortis in ipsum sit amet elementum. Sed tincidunt eros at sem suscipit lacinia. Ut ultrices pharetra tellus. Nulla vitae accumsan enim, eget accumsan eros. Suspendisse bibendum mollis augue quis suscipit. Duis scelerisque laoreet laoreet. Mauris at nisi ac magna commodo ullamcorper a quis libero. Maecenas sapien est, lobortis sit amet mi ut, euismod blandit lacus. Aenean ac felis diam. Integer nec pharetra sem. Sed pulvinar velit sit amet ipsum porta, ut faucibus dolor maximus.
+</div>
+			<div class="small-10 columns">not so much content</div>
+			<div class="clearfix visible-lg-block"></div>
+			<div class="small-5 columns">not so much content either</div>
+			
+		</div>
+
+		<h3>offset</h3>
+		<p>what to do when you need some whitespace?</p>
+		<div class="row">
+			<div class="small-4 columns">.small-4</div>
+			<div class="small-4 columns">.small-4 needs to be whitespace</div>
+			<div class="small-4 columns">.small-4</div>
+			<div class="small-4 columns">.small-4</div>
+			<div class="small-4 small-offset-4 columns">.small-4 .small-offset-4 no need for a middle div</div>
+		</div>
+		<div class="row">
+			<div class="small-4 small-centered large-uncentered columns">.small-4.centered</div>
+		</div>
+
+		<h2>nesting</h2>
+		<div class="row">
+			<div class="small-6 columns">
+				6/12
+				<div class="row">
+					<div class="small-6 columns">6/12
+						<div class="row">
+							<div class="small-9 columns">9/12</div>
+						</div>
+					</div>
+					<div class="small-6 columns">6/12</div>
+				</div>
+			</div>
+		</div>
+
+
+		<h2>different devices</h2>
+		<div class="row">
+			<h3>works every time</h3>
+			<div class="small-1 columns">small-1</div>
+			<div class="small-2 columns">small-2</div>
+			<div class="small-3 columns">small-3</div>
+			<div class="small-4 columns">small-4</div>
+			<div class="small-5 columns">small-5</div>
+			<div class="small-6 columns">small-6</div>
+			<div class="small-7 columns">small-7</div>
+			<div class="small-8 columns">small-8</div>
+			<div class="small-9 columns">small-9</div>
+			<div class="small-10 columns">small-10</div>
+			<div class="small-11 columns">small-11</div>
+			<div class="small-12 columns">small-12</div>
+		</div>
+
+		<!-- <div class="row">
+			<h3>small devices > 768px (col-sm-#)</h3>
+			<div class="col-sm-1">col-sm-1</div>
+			<div class="col-sm-2">col-sm-2</div>
+			<div class="col-sm-3">col-sm-3</div>
+			<div class="col-sm-4">col-sm-4</div>
+			<div class="col-sm-5">col-sm-5</div>
+			<div class="col-sm-6">col-sm-6</div>
+			<div class="col-sm-7">col-sm-7</div>
+			<div class="col-sm-8">col-sm-8</div>
+			<div class="col-sm-9">col-sm-9</div>
+			<div class="col-sm-10">col-sm-10</div>
+			<div class="col-sm-11">col-sm-11</div>
+			<div class="col-sm-12">col-sm-12</div>
+		</div>
+		<p>vanaf het scherm  768px wordt zullen de divs het gekozen twaalfde aannemen, voordien zijn ze 100% <br>
+			je ziet ook dat er langs beide kanten van je grid witruimte vrijkomt. de breedte van het grid is nu 750px</p> -->
+
+		<div class="row">
+			<h3>medium devices > 40.0625em (col-sm-#)</h3>
+			<div class="medium-1 columns">medium-1</div>
+			<div class="medium-2 columns">medium-2</div>
+			<div class="medium-3 columns">medium-3</div>
+			<div class="medium-4 columns">medium-4</div>
+			<div class="medium-5 columns">medium-5</div>
+			<div class="medium-6 columns">medium-6</div>
+			<div class="medium-7 columns">medium-7</div>
+			<div class="medium-8 columns">medium-8</div>
+			<div class="medium-9 columns">medium-9</div>
+			<div class="medium-10 columns">medium-10</div>
+			<div class="medium-11 columns">medium-11</div>
+			<div class="medium-12 columns">medium-12</div>
+		</div>
+		<p>vanaf het scherm min-width: 64.0625e is zullen de divs de gekozen breedte pas aannemen, voordien zijn ze 100%</br>
+				de breedte van onze container bedraagt nu 970px</p>
+		<div class="row">
+			<h3>large devices > 1200px (col-sm-#)</h3>
+			<div class="large-1 columns">large-1</div>
+			<div class="large-2 columns">large-2</div>
+			<div class="large-3 columns">large-3</div>
+			<div class="large-4 columns">large-4</div>
+			<div class="large-5 columns">large-5</div>
+			<div class="large-6 columns">large-6</div>
+			<div class="large-7 columns">large-7</div>
+			<div class="large-8 columns">large-8</div>
+			<div class="large-9 columns">large-9</div>
+			<div class="large-10 columns">large-10</div>
+			<div class="large-11 columns">large-11</div>
+			<div class="large-12 columns">large-12</div>
+		</div>
+		<p>vanaf het scherm 1200px breed is volgt het de gekozen styling. <br>
+			onze container is nu 1170px</p>
+		<div class="row">
+			<h3>het nut?</h3>
+			<p>Het wordt nu veel simpeler om responsive te designen. <br>
+				ja geeft gewoon een klasse mee ahv het device waarmee gewerkt wordt en bootstrap zal automatisch aanpassen aan de breedte van je scherm.</p>
+
+			<div class="small-8 col-sm-6 medium-4 large-2 columns">hoe breder het scherm wordt, hoe smaller (in verhouding) de div wordt: rescale window!</div>
+		</div>
+	</div>
+
+</body>
+</html>
