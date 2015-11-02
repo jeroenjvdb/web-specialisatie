@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>typography bootstrap</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.css">
+	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+	<script src="dist/js/jquery-1.9.1.min.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>h1 <small>small text through small tag |</small><span class="small"> small text though span tag with class small</span> </h1>
+		<h2>h2 <span class="small">small text</span> </h2>
+		<h3>h3 <span class="small">small text</span></h3>
+		<h4>h4 <span class="small">small text</span></h4>
+		<h5>h5 <span class="small">small text</span></h5>
+		<h6>h6 <span class="small">small text</span></h6>
+		<p>dit is een paragraaf me een inline <pan class="h1">h1 title</span></p>
+		<p class="lead">dit is een lead paragraaf die er meer uit zou moeten komen dan een gewone paragraaf</p>
+		<p>dut us een paragraaf om te vergelijken met de bovenstaande paragraaf</p>
+		<p>in deze paragraaf gea ik spelen met enkele tags. o is het bijvoorbeeld mogelijk om text te <mark>higlighten</mark>. er zou een verschile moeten zijn tussen de <del>del-tag</del> en de <s>s-tag</s>, en net hetzelfde met de <ins>ins-tag</ins> en de <u>u-tag</u>. dit zijn echter geen toevoegingen aan de bootstrap, eerder standaard html toevoegingen</p>
+		<h2>en nu voor allignent</h2>
+		<div class="row">
+			<P class="text-left">links gecentreerd</P>
+			<p class="text-right">rechts gecentreerd</p>
+			<p class="text-center">in het midden gecentreerd</p>
+			<p class="text-justify">justified, dit zou elke lijn even lang maken. dus testen we dit even vlug. wanneer ik rescale zou de text zich verspreiden over even lange lijnen</p>
+			<div class="col-xs-3" style="border: 1px solid black">
+				<p class="text-nowrap">no wrap, deze tekst zal op dezelfde lijn doorgaan tot er een br tag geschreven wordt.</p>
+				<p>wrap, deze tekst zal normaal gezien overschakelen op de volgende lijn wanneer het aan het einde van de div komt</p>
+			</div>
+	</div>
+	<h2>transformation classes</h2>
+	<p class="text-lowercase">Deze tekst zal volledig in kleine letters geschreven worden DIT ZIJN ALLEMAAL HOOFDLETTERS</p>
+	<p class="uppercase">Deze tekst zal volledig in uppercase letters geschreven worden</p>
+	<p class="text-capitalize">In deze tekst zal de eerste letter van elk woord een hoofdletter worden DIT ZIJN ALLEMAAL HOOFDLETTERS, letters die groot geschreven zijn zullen uppercase blijven</p>
+
+	<h2>lists</h2>
+	<ul>
+		<li>unorderd</li>
+		<li>list</li>
+		<li>item</li>
+	</ul>
+	<ol>
+		<li>ordered</li>
+		<li>list</li>
+		<li>item</li>
+	</ol>
+	<ul class="list-unstyled">
+		<li>unstyled</li>
+		<li>list</li>
+		<li>item</li>
+	</ul>
+	<ul class="list-inline">
+		<li>inline</li>
+		<li>list</li>
+		<li>item</li>
+	</ul>
+	
+	<dl>
+		<dt>title</dt>
+		<dd>description1</dd>
+		<dt>title2</dt>
+		<dd>description1</dd>
+		<dt>title3</dt>
+		<dd>description3</dd>
+	</dl>
+	<dl class="dl-horizontal">
+		<dt>title</dt>
+		<dd>description1</dd>
+		<dt>title2</dt>
+		<dd>description1</dd>
+		<dt>title3</dt>
+		<dd>description3</dd>
+	</dl>
+</body>
+</html>	

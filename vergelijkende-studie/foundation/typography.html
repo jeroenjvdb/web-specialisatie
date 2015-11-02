@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>typography foundation</title>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+	<h1>normal h1  <small>small segment</small></h1>
+	<h1 class="subheader">h1 subheader</h1>
+	<h2>normaal h2 <small>small segment</small></h2>
+	<h2 class="subheader">h2 subheader</h2>
+	<h3>normal h3 <small>small segment</small></h3>
+	<h3 class="subheader">h3 subheader</h3>
+	<h4>normal h4  <small>small segment</small></h4>
+	<h4 class="subheader">h4 subheader</h4>
+	<h5>normal h5  <small>small segment</small></h5>
+	<h5 class="subheader">h5 subheader</h5>
+	<h6>normal h6  <small>small segment</small></h6>
+	<h6 class="subheader">h6 subheader</h6>
+	
+	<h2>allignment</h2>
+
+	<div class="row">
+			<P class="text-left">links gecentreerd</P>
+			<p class="text-right">rechts gecentreerd</p>
+			<p class="text-center">in het midden gecentreerd</p>
+			<p class="text-justify">justified, dit zou elke lijn even lang maken. dus testen we dit even vlug. wanneer ik rescale zou de text zich verspreiden over even lange lijnen</p>
+
+			<div class="columns small-4">
+				<p class="medium-text-center small-text-left">deze tekst is op scherme die medium grootte hebben gecentreerd en op kleine schermen staat ze links</p>
+			</div>
+	</div>
+	<div class="row">
+	<h2>lists</h2>
+		<ul class="disc">
+			<li>unordered</li>
+			<li>list
+				<ul>
+					<li>nested</li>
+					<li>item</li>
+				</ul>
+			</li>
+			<li>disc</li>
+		</ul>
+		<ul class="circle">
+			<li>unordered</li>
+			<li>list
+				<ul>
+					<li>nested</li>
+					<li>item</li>
+				</ul>
+			</li>
+			<li>circle</li>
+		</ul>
+		<ul class="square">
+			<li>unordened</li>
+			<li>list
+				<ul>
+					<li>nested</li>
+					<li>item</li>
+				</ul>
+			</li>
+			<li>square</li>
+		</ul>
+		<ul class="no-bullet">
+			<li>unordered</li>
+			<li>list
+				<ul>
+					<li>nested</li>
+					<li>item</li>
+				</ul>
+			</li>
+			<li>no bullet</li>
+		</ul>
+		<ul class="inline-list">
+			<li>inline</li>
+			<li>list</li>
+			<li>item</li>
+		</ul>
+		<l>
+			<li>ordered</li>
+			<li>list</li>
+			<li>item</li>
+		</l>
+
+		<dl>
+			<dt>title1</dt>
+			<dd>description1</dd>
+			<dt>title2</dt>
+			<dd>description2</dd>
+			<dt>title3</dt>
+			<dd>description3</dd>
+		</dl>
+	</div>		
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/fastclick.js"></script>
+
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>
