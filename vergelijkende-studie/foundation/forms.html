@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms foundation</title>
+	 <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Forms</h1>
+		<div class="row">
+			<form action="">
+				<h2>full width input</h2>
+				<div>
+						<label for="input1">input 1</label>
+					<div >
+						<input type="text" class="radius " id="input1" autofocus >
+					</div>
+				</div>
+				<h2>inline input</h2>
+				<div class="row">
+					<div class="small-4 columns">
+						<div class="small-3 columns"><label for="inline1" class="right inline">label</label></div>
+						<div class="small-9 columns"><input type="text" id="inline1" class="radius"></div>	
+					</div>
+					<div class="small-4 small-offset-2 columns end">
+						<div class="small-3 columns"><label for="inline3" class="right inline">label3</label></div>	
+						<div class="small-9 columns"><input type="text" id="inline3" name="inline2"></div>
+					</div>
+				</div>
+				<h2>horizontal form</h2>
+				<div   class="row">
+					<div class="small-2 columns">
+						<label for="input2" class="right inline">input 1</label>
+					</div>
+					<div class="small-10 columns">
+						<input type="text" class="form-control" id="input2" >
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-2 columns">
+						<label for="input3" class="right inline">input 1</label>
+					</div>
+					<div class="small-10 columns">
+						<input type="text" class="" id="input3">
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-2 columns">
+						<label for="input4" class="right inline">input 1</label>
+					</div>
+					<div class="small-10 columns">
+						<input type="text" class="form-control" id="input4" >
+					</div>
+				</div>
+				<div class="row collapse">
+			    	<div class="small-3 large-2 columns">
+			      		<span class="prefix">http://</span>
+			    	</div>
+			    	<div class="small-9 large-10 columns">
+			     		<input type="text" placeholder="Enter your URL...">
+			    	</div>
+			  	</div>
+			  	<div class="row">
+			    	<div class="large-12 columns">
+			      		<div class="row collapse">
+			        		<div class="small-10 columns">
+			          			<input type="text" placeholder="Hex Value">
+			        		</div>
+			        		<div class="small-2 columns">
+			          			<a href="#" class="button postfix">Go</a>
+			        		</div>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	<div class="row">
+			    	<div class="large-6 columns">
+			      		<div class="row collapse prefix-radius">
+			        		<div class="small-3 columns">
+			          			<span class="prefix">Label</span>
+			        		</div>
+			        		<div class="small-9 columns">
+			          			<input type="text" placeholder="Value">
+			        		</div>
+			      		</div>
+			    	</div>
+			    	<div class="large-6 columns">
+			      		<div class="row collapse postfix-radius">
+			        		<div class="small-9 columns">
+			          			<input type="text" placeholder="Value">
+			        		</div>
+			        		<div class="small-3 columns">
+			          			<span class="postfix">Label</span>
+			        		</div>
+			      		</div>
+			    	</div>
+			  	</div>
+			  	<div class="row">
+			    	<div class="large-6 columns">
+			      		<div class="row collapse prefix-round">
+			        		<div class="small-3 columns">
+			          			<a href="#" class="button prefix">Go</a>
+			        		</div>
+			        		<div class="small-9 columns">
+			          			<input type="text" placeholder="Value">
+			        		</div>
+			      		</div>
+			    	</div>
+			    	<div class="large-6 columns">
+			      		<div class="row collapse postfix-round">
+			        		<div class="small-9 columns">
+			          			<input type="text" placeholder="Value">
+			        		</div>
+			        		<div class="small-3 columns">
+			          			<a href="#" class="button postfix">Go</a>
+			        		</div>
+			      		</div>
+			    	</div>
+			  	</div>
+
+			  	<h2>errors</h2>
+			  	<div class="row">
+				    <div class="large-6 columns">
+				      	<label class="error">Error
+				        	<input type="text" class="error" />
+				      	</label>
+				      	<small class="error">Invalid entry</small>
+			    	</div>
+				    <div class="large-6 columns error">
+				      	<label>Another Error
+				        	<input type="text" />
+				      	</label>
+				      	<small class="error">Invalid entry</small>
+				    </div>
+			  	</div>
+			  	<textarea class="error" placeholder="Message..."></textarea>
+			  	<small class="error">Invalid entry</small>
+				<h2>input column sizing <columns small>use col-... classes</columns small></h2>
+				<div class=" columns small-2"><input type="text" class="form-control"></div>
+				<div class=" columns small-3"><input type="text" class="form-control"></div>
+				<div class=" columns small-4"><input type="text" class="form-control"></div>
+				<div class=" columns small-5 end"><input type="text" class="form-control"></div>
+			</div>
+			<div class="row">
+				<h2>label custom inputs</h2>
+				<label id="ageLabel">Age<!--for screen readers--></label>
+				<div class="range-slider" data-slider data-options="display_selector: #ageOutput;">
+				  <span class="range-slider-handle" role="slider" aria-labelledby="ageLabel" aria-describedby="ageHelpText" tabindex="0"><!-- aria-labelledby en aria-describedby dienen om de juiste label- en helptekst te vinden voor screen readers --></span>
+				  <span class="range-slider-active-segment"></span>
+				  <input type="hidden">
+				</div>
+				<div>
+				  <span id="ageOutput"></span>
+				</div>
+				<p id="ageHelpText">How old are you?<!-- for screen readers --></p>
+				<h2>checkboxes en radiobuttons</h2>
+				<h3>normal</h3>
+				<div class="row">
+				    <div class="large-6 columns">
+					  <h4>radios</h4>
+				      <label>Choose Your Favorite</label>
+				      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+				      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+				    </div>
+				    <div class="large-6 columns">
+				    	<h4>checkboxes</h4>
+				      <label>Check these out</label>
+				      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+				      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+				    </div>
+			  	</div>
+				<h3>switches</h3>
+				<h4>checkboxes</h4>
+				<div class="switch">
+				  <input id="exampleCheckboxSwitch" type="checkbox">
+				  <label for="exampleCheckboxSwitch"></label>
+				</div> 
+
+				<!-- Using radio buttons – each switch turns off the other two -->
+				<h4>radios</h4>
+				<div class="switch small">
+				  <input id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+				  <label for="exampleRadioSwitch1"></label>
+				</div> 
+
+				<div class="switch radius">
+					<p>with radius</p>
+				  <input id="exampleRadioSwitch2" type="radio" name="testGroup">
+				  <label for="exampleRadioSwitch2"></label>
+				</div> 
+
+				<div class="switch round large">
+					<p>with round</p>
+				  <input id="exampleRadioSwitch3" type="radio" name="testGroup">
+				  <label for="exampleRadioSwitch3"></label>
+				</div>
+			</form>
+				<h2>validation</h2>
+				<form data-abide>
+				  <div class="name-field">
+				    <label>Your name <small>required</small>
+				      <input type="text" required pattern="[a-zA-Z]+">
+				    </label>
+				    <small class="error">Name is required and must be a string.</small>
+				  </div>
+				  <div class="email-field">
+				    <label>Email <small>required</small>
+				      <input type="text" required pattern="email">
+				    </label>
+				    <small class="error">An email address is required.</small>
+				  </div>
+				  <div class="password"><label for="">password<small> required</small><input type="password" required ></label>
+				  <small class="error">the password is required and must contain 8-10 characters</small>
+				  </div>
+				  <button type="submit">Submit</button>
+				</form>
+
+		</div>
+	</div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/fastclick.js"></script>
+
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+		$(document)
+  .foundation({
+    abide : {
+      patterns: {
+        dashes_only: /^[0-9-]*$/,
+        ip_address: /^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/,
+        password: /^[a-zA-Z0-9]{8,10}$/,
+         email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+
+        // reg exp patterns (all between slashes)
+        // # of characters: {2} -> must have 2 characters, 
+        //					{2,} -> must have at least 2 characters
+        //					{2,5} -> must have between 2 and 5 characters
+        // range of 		[abc] -> must have any characters between the brackets
+        // characters		[a-z] -> must have any character from a-z (works with ANSI)
+        //					(x|y) -> find "x" or "y"
+        //					^ -> start of range, doesn't have these
+        // metacharacters	\d ->must have a digit
+        //					\s -> must have a whitespace
+       	//					\bstring -> must have string at the start of a word
+        // quantifiers		n+ -> must have at least one n	
+        // 					n* -> any string that contains zero or more times n
+        //					n? -> must have one or zero times n
+        //boundaries 		^ -> start of input
+        //					$ -> end of input
+        //... more info at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+      }
+    }
+  });
+	</script>
+</body>
+</html>
