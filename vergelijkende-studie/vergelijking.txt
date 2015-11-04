@@ -1,0 +1,111 @@
+Gridview:
+	responsive:
+		bootstrap heeft een indeling meer dan foundation voor de responsive gridview (xs(=altijd) -small (=vanaf 768px)-medium(vanaf 992px)-large(=vanaf 1200px) vs small(=altijd)-medium(=vanaf 40.0625em)-large(=vanaf 64.0625em)). Ik vind het ook makkelijker te werken in een vast aantal pixels in tegenstelling tot de grootte van het font. een gridview moet naar mijn weten meer gebasseerd zijn om een #pixels dan een # * de font grootte.
+
+	container:
+		foundation maakt geen gebruik van een container. terwijl bootstrap 2 soorten containers heeft om er mee naar keuze te werken. dit zorgt ervoor dat er een maximum breedte wordt gezet op een rij, waardoor je dan het probleem hebt dat de rijen ervoor zorgen wat de breedte is van het project en niet een bovenliggend element.
+
+	classname:
+		het gebruik van de classname column/columns bij foundation maakt het makkelijker om alle divs gelijk te stijlen, maar er moet aan gedacht worden dat beide mogelijk zijn. het is echter even goed mogelijk om alle columns in bootstrap gelijk te stellen via de selector ( [class^="col-"] )
+
+	centering:
+		bij foundation kan je makkelijk selecteren wanneer je een element wil centreren en wanneer niet.
+		bij bootstrap moet je eerder werken vie de offset om iets horizontaal te centreren, wat niet hetzelfde gebruiksgemak heeft. er is echter wel een center-block en center-text methode, maar deze is zeker niet zo gebruiksvriendelijk als de centering in foundation.
+
+navigation:
+	bootstrap:
+		navbar-default: kleur #E7E7E7, navbar-inverse: #080808 (gebruik tegengestelde kleuren)
+		fixed-top/fixed-bottom: fixed position, blijft tijdens scrollen op zelfde positie hangen
+		content in container(-fluid) -> static, zelfde maar geen extra padding toevoegen aan onderstaande div
+		text in navbar: class="navbar-text", links als class="navbar-link"
+		tabs in ul>li>a
+		dropdown (gebruik bootstrap.js <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> tekst <span class="caret"></span></a>
+		-> ul.dropdown-mune met links in )
+		mobile dropdowns: alles komt onder elkaar, het menu wordt groter en groter
+		sticky navbar te krijgen door een extra library in te laden (affix.js)
+
+	foundation:
+		veel extra styling nodig om en brandimage deftig in beeld te brengen (niet out of the box ready)-> nog extra om hiernaast de naam te zetten van de brand
+		enkel fixed-top-bar door bestaande klasses, eigen static gebruiken?
+			gemakkelijk te doen: klasse static toevoegen
+			(css) .fixed.static{ position: relative; }
+			->fout, bij het inladen van de js wordt het automatisch static gemaakt
+		mobile dropdown
+			enkel de naam van het dropdown element is nog zichtbaar. je kan terug op back klikken om terug te gaan
+		automatisch de mogelijkheid om iets sticky te maken door het toevoegen van de klasse sticky aan de navbar
+
+	algemeen:
+		foundation is strakker in gebruik, maar het zorgt er wel voor dat er veel extra styling etc. gebruikt moet worden. het geeft wel een grotere vrijheid dan waardat bootstrap makkelijk is voor out of the box te werken zodat je niet veel extra meer moet doen dan enkel de juiste klasses toe te voegen en de juiste files in te laden.
+		foundation is niet alleen strakker maar ook vollediger om een deftige navigatie te maken
+
+typography
+	bootstrap:
+		headings
+			h1->h6 werkt, je kan makkelijk een kleinere subtitle met de klasse .small of de <small> tag (werking = gelijk)
+			mogelijkheid tot inline title opmaak
+			paragraven er meer doen uitspringen via de klasse .lead, dit vergroot het lettertype met factor 1.5
+		inline text-elements
+			het enige dat bootstrap extra doet voor inline elementen is een padding zetten op elementen met een mark-tag
+		allignment en transformations
+			bootstrap zet css properties om in makkelijk te gebruiken klasses
+		lists
+			er zijn verschillende klasses gemaakt om opmaak voor lists te regelen, deze zijn niet speciaal mooi, maar maken het wel makkelijker om snel extra styling toe te voegen.
+			mogelijkheid om makkelijk deftige description tables te maken, onder elkaar + horizontaal
+	foundation
+		headings
+			werkt vrij gelijkaardig aan bootstrap
+			extra classes met subheaders
+			geen small class, maar small-tags kunnen wel gebruikt worden
+		allignment en transformations
+			alles hetzelfde als bij bootstrap, maar geen nowrap.
+			je kan dit daarbovenop ook nog instellen afhankelijk van de grootte van je scherm.
+			geen speciale classes voor text-transformation
+		lists
+			de bullets van unordered lists zijn makkelijk via het toevoegen van een klasse aan te passen, inline list items ook mogelijk
+			mogelijkheid om makkelijk deftige description tables te maken onder elkaar
+
+forms
+	bootstrap:
+		.form-group voor een groep elementen in een form zoals label en input
+		.form-control voor text inputs (100% width van parent element)
+		-full width: normaal
+		-inline: parent van .form-group is .form-inline
+		-horizontal: form-group opgedeeld in divs met breedte (col-xs-), label rechts gecentreerd met control-label
+		-input sizing: gebruik van parent div met breedte
+		-:disabled -> niet te gebruiken, disabled teken bij hover
+		-:readonly -> niet te gebruiken, geen disabled teken bij hover
+		pre/postfix -> 
+			pre: input-group-addon 
+			post: .form-control-feedback, .form-group -> .form-group.has-feedback
+		-feedback -> handige manier om te stylen na validatie, extra plug in nodig voor validatie
+	foundation
+		inputs automatisch 100% breedte
+		inline: parent div bepaalde breedte meegeven
+		horizontal: same as above, label column size geven in de input in een div met breedte steken
+		pre/postfix: 
+			kan samen met .button gebruikt worden
+			mogelijkheid tot round en radius
+			pre: .prefix
+			post: .postfix
+		checkboxes:
+			toffe opmaak switches
+		feedback: errors als sibling van input in small.error
+		validation:
+			in javascript foundation aanroepen
+			form tag: data-abide toevoegen
+			:required -> moet ingevuld worden
+			:data-equalto -> confirmationfield ="#equaltoid"
+			:pattern="regExp" -> pattern dat de input moet hebben
+slideshow
+	bootstrap
+		carousel
+			vrij moeilijk in gebruik, arrows en bullets moeten toegevoegd worden in de html terwijl andere dingen dan ingesteld moeten worden in de javascript .carousel({options});
+			maakt het makkelijker om elementen bepaalde classes/ids etc. mee te geven voor styling
+	foundation
+		orbit
+			zeer gemakkelijk in gebruik, slideshow en ul met :data-orbit
+			makkelijke class voor normale captions: orbit-caption
+			slider praktisch volledig in te stellen via javascript
+				timer_speed, pause_on_hover, navigation_arrows, ...
+				classes kunnen ook via deze weg makkelijk meegegeven worden
+
