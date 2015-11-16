@@ -101,6 +101,7 @@ slideshow
 		carousel
 			vrij moeilijk in gebruik, arrows en bullets moeten toegevoegd worden in de html terwijl andere dingen dan ingesteld moeten worden in de javascript .carousel({options});
 			maakt het makkelijker om elementen bepaalde classes/ids etc. mee te geven voor styling
+			snelle manier om keyboard events toe te voegen
 	foundation
 		orbit
 			zeer gemakkelijk in gebruik, slideshow en ul met :data-orbit
@@ -109,3 +110,9 @@ slideshow
 				timer_speed, pause_on_hover, navigation_arrows, ...
 				classes kunnen ook via deze weg makkelijk meegegeven worden
 
+extras:
+	bootstrap:
+		glyphicon: een lijst iconen die als class mee te geven zijn met een span, zeer strak
+		scrollspy: scrollspy triggert een event wanneer je een id passeert, dit kan zich makkelijk uiten in 
+	foundation
+	''
