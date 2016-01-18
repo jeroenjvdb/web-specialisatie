@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML5 Pacman</title>
+    
+    <style type="text/css">
+      @font-face {
+	    font-family: 'BDCartoonShoutRegular';
+        src: url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+	    font-weight: normal;
+	    font-style: normal;
+      }
+      #pacman {
+        height:450px;
+        width:342px;
+        margin:20px auto;
+      }
+      #shim { 
+        font-family: BDCartoonShoutRegular; 
+        position:absolute;
+        visibility:hidden
+      }
+      h1 { font-family: BDCartoonShoutRegular; text-align:center; }
+      body { width:342px; margin:0px auto; font-family:sans-serif; }
+      a { text-decoration:none; }
+    </style>
+
+</head>
+
+<body>
+  
+  <div id="shim">shim for font face</div>
+
+  <h1>HTML5 Pacman</h1>
+
+  <a href="http://arandomurl.com/">Writeup</a> |
+  Code on <a href="http://arandomurl.com/">Github</a>
+
+  <div id="pacman"></div>
+
+  <canvas id="mainCanvas" style="-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+transform: scale(-1, 1);
+filter: FlipH;"></canvas>
+                    <video style="display: none;" autoplay></video>
+  <script src="pacman.js"></script>
+  <script src="modernizr-1.5.min.js"></script>
+  <script>
+    window.onload = function () {
+      console.log('test');
+        var width = 480;
+        var height = 364;
+        var cGaze = new camgaze.Camgaze(width, height, "mainCanvas");
+        var faceDetector = new camgaze.CVUtil.HaarDetector(
+            camgaze.cascades.frontalface,
+            width,
+            height
+        );
+        var drawer = new camgaze.drawing.ImageDrawer();
+
+        var frameOp = function (image_data, video) {
+            var faceRects = faceDetector.detectObjects(
+                video,
+                1.1,
+                1
+            );
+
+            faceRects.forEach(
+                function (face) {
+                    image_data = drawer.drawRectangle(
+                        image_data,
+                        face,
+                        face.width,
+                        face.height,
+                        3,
+                        "red"
+                    );
+                    var relativeX = face.x/300*canvas.width;
+                    console.log(canvas.width);
+                    // var relativeX = e.clientX - canvas.offsetLeft;
+                    if(relativeX > 0 && relativeX < canvas.width) {
+                        paddleX = canvas.width - relativeX;
+                    }
+                    // faceX = paddleX = relativeX-face.x;
+                }
+            );
+            return image_data;
+        };
+        cGaze.setFrameOperator(frameOp);
+
+        var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    } 
+    } 
+  
+
+    
+  </script>
+
+</body>
+</html>
